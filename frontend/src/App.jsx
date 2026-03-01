@@ -11,6 +11,10 @@ import ResetPassword from './pages/ResetPassword';
 import Profile from './pages/Profile';
 import Cars from './pages/Cars';
 import CarDetail from './pages/CarDetail';
+import About from './pages/About';
+import HowItWorks from './pages/HowItWorks';
+import Contact from './pages/Contact';
+import FAQ from './pages/FAQ';
 import Booking from './pages/Booking';
 import BookingHistory from './pages/BookingHistory';
 import DriverRegister from './pages/DriverRegister';
@@ -53,6 +57,10 @@ function App() {
         <Route path="reset-password" element={<ResetPassword />} />
         <Route path="cars" element={<Cars />} />
         <Route path="cars/:id" element={<CarDetail />} />
+        <Route path="about" element={<About />} />
+        <Route path="how-it-works" element={<HowItWorks />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="faq" element={<FAQ />} />
         <Route path="profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
         <Route path="bookings" element={<PrivateRoute><BookingHistory /></PrivateRoute>} />
         <Route path="book/:carId" element={<PrivateRoute><Booking /></PrivateRoute>} />

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import logoImg from '../Rent.png';
 import './Footer.css';
 
 export default function Footer() {
@@ -11,7 +12,9 @@ export default function Footer() {
       <div className="container footer-inner">
         <div className="footer-grid">
           <div className="footer-brand">
-            <Link to="/" className="footer-logo">Rent A Car</Link>
+            <Link to="/" className="footer-logo">
+              <img src={logoImg} alt="Rent A Car" className="footer-logo-img" />
+            </Link>
             <p className="footer-tagline">Your journey, your choice. Book a car in minutes — Body Bhara or Full Book.</p>
           </div>
           <div className="footer-col">

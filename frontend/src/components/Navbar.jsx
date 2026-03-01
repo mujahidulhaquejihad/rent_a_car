@@ -3,6 +3,7 @@ import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
+import logoImg from '../Rent.png';
 import './Navbar.css';
 
 export default function Navbar() {
@@ -31,8 +32,7 @@ export default function Navbar() {
       <div className="navbar-accent" aria-hidden="true" />
       <div className="container navbar-inner">
         <Link to="/" className="logo" onClick={() => setMobileOpen(false)}>
-          <span className="logo-icon" aria-hidden="true">🚗</span>
-          <span className="logo-text">Rent A Car</span>
+          <img src={logoImg} alt="Rent A Car" className="logo-img" />
         </Link>
 
         <button
@@ -54,6 +54,18 @@ export default function Navbar() {
           </NavLink>
           <NavLink to="/cars" className={navLinkClass} onClick={() => setMobileOpen(false)}>
             {t('nav.cars')}
+          </NavLink>
+          <NavLink to="/about" className={navLinkClass} onClick={() => setMobileOpen(false)}>
+            {t('nav.about')}
+          </NavLink>
+          <NavLink to="/how-it-works" className={navLinkClass} onClick={() => setMobileOpen(false)}>
+            {t('nav.howItWorks')}
+          </NavLink>
+          <NavLink to="/contact" className={navLinkClass} onClick={() => setMobileOpen(false)}>
+            {t('nav.contact')}
+          </NavLink>
+          <NavLink to="/faq" className={navLinkClass} onClick={() => setMobileOpen(false)}>
+            {t('nav.faq')}
           </NavLink>
           {user && (
             <NavLink to="/bookings" className={navLinkClass} onClick={() => setMobileOpen(false)}>

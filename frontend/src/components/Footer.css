@@ -35,12 +35,19 @@
 }
 
 .footer-logo {
+  display: inline-flex;
+  align-items: center;
   font-weight: 700;
   font-size: 1.35rem;
   color: var(--primary);
   text-decoration: none;
-  display: inline-block;
   margin-bottom: 0.5rem;
+}
+
+.footer-logo-img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
 }
 
 .footer-logo:hover {
