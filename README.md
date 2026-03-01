@@ -35,8 +35,6 @@ A full-stack car rental platform with user and driver flows, bookings (Body Bhar
 | 23 | Driver Review User | Drivers rate passengers |
 | 24 | Language | English / Bangla toggle |
 | 25 | Day/Night Mode | Light/Dark theme toggle |
-
-<img width="1917" height="877" alt="Screenshot 2026-03-02 010750" src="https://github.com/user-attachments/assets/85c883a6-4d91-4579-ae54-d588c54408ad" />
 <img width="1908" height="882" alt="Screenshot 2026-03-02 010741" src="https://github.com/user-attachments/assets/cfa6b411-6df3-4350-9a53-fea15819cf89" />
 <img width="1912" height="872" alt="Screenshot 2026-03-02 010732" src="https://github.com/user-attachments/assets/d8c0a09a-d9ef-48ed-bbed-53201527c456" />
 <img width="1912" height="882" alt="Screenshot 2026-03-02 010724" src="https://github.com/user-attachments/assets/4243e8f3-c80c-4f7d-bf8d-fa9063f8f089" />
@@ -51,6 +49,8 @@ A full-stack car rental platform with user and driver flows, bookings (Body Bhar
 <img width="1895" height="756" alt="Screenshot 2026-03-02 010453" src="https://github.com/user-attachments/assets/ffaccd8d-4d90-444a-a74b-7c81860bca05" />
 <img width="1902" height="877" alt="Screenshot 2026-03-02 010441" src="https://github.com/user-attachments/assets/49a5d3f1-ede3-4952-bb1a-c3402ce031d5" />
 <img width="1897" height="877" alt="Screenshot 2026-03-02 010355" src="https://github.com/user-attachments/assets/6df919b9-0219-416e-818d-c6be2e501b8e" />
+<img width="1917" height="877" alt="Screenshot 2026-03-02 010750" src="https://github.com/user-attachments/assets/85c883a6-4d91-4579-ae54-d588c54408ad" />
+
 
 
 ## Project Structure
