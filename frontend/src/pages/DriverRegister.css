@@ -1,0 +1,15 @@
+.driver-register {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.driver-register h1 {
+  margin-bottom: 0.5rem;
+}
+
+.driver-register .hint {
+  color: var(--textMuted);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}

@@ -1,0 +1,54 @@
+.booking-page {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.booking-page h1 {
+  margin-bottom: 0.5rem;
+}
+
+.car-name {
+  color: var(--textMuted);
+  margin-bottom: 1.5rem;
+}
+
+.booking-type-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.radio-label input {
+  width: auto;
+}
+
+.total-preview {
+  font-weight: 600;
+  margin: 1rem 0;
+  color: var(--primary);
+}
+
+.confirm-summary {
+  background: var(--bg);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.confirm-summary p {
+  margin-bottom: 0.5rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}

@@ -1,0 +1,14 @@
+.add-car {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.add-car h1 {
+  margin-bottom: 1.5rem;
+}
+
+.add-car label input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.5rem;
+}

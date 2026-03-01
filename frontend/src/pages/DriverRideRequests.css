@@ -1,0 +1,32 @@
+.ride-requests-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ride-card {
+  padding: 1.25rem;
+}
+
+.ride-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.ride-header .status {
+  font-size: 0.85rem;
+  color: var(--textMuted);
+}
+
+.ride-card p {
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.ride-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}

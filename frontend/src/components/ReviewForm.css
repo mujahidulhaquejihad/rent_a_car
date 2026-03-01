@@ -1,0 +1,19 @@
+.review-form-wrap {
+  margin-top: 0.75rem;
+}
+
+.review-form {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  max-width: 320px;
+}
+
+.review-form .form-group {
+  margin-bottom: 0.75rem;
+}
+
+.review-done {
+  color: var(--success);
+  display: block;
+  margin-top: 0.5rem;
+}
