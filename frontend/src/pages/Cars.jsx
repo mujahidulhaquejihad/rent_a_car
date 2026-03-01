@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import api from '../services/api';
-import { getImageUrl } from '../utils/imageUrl';
+import { getCarImageUrl } from '../utils/imageUrl';
 import './Cars.css';
 
 const TYPES = ['Sedan', 'Micro', 'SUV', 'Premium'];
@@ -34,7 +34,6 @@ export default function Cars() {
     }).catch(() => setCars([])).finally(() => setLoading(false));
   }, [type, search, minPrice, maxPrice]);
 
-  const imgUrl = (path) => getImageUrl(path);
 
   return (
     <div className="container">
@@ -67,14 +66,12 @@ export default function Cars() {
           {cars.map((car) => (
             <div key={car._id} className="card car-card">
               <div className="car-image">
-                {car.images?.[0] && (
-                  <img
-                    src={imgUrl(car.images[0])}
-                    alt={car.model}
-                    onError={(e) => { e.target.onerror = null; e.target.style.display = 'none'; e.target.nextElementSibling?.classList.add('show'); }}
-                  />
-                )}
-                <div className={`car-placeholder ${!car.images?.[0] ? 'show' : ''}`}>{car.brand?.[0]}</div>
+                <img
+                  src={getCarImageUrl(car)}
+                  alt={`${car.brand} ${car.model}`}
+                  onError={(e) => { e.target.onerror = null; e.target.style.display = 'none'; e.target.nextElementSibling?.classList.add('show'); }}
+                />
+                <div className="car-placeholder" aria-hidden="true">{car.brand?.[0]}</div>
                 <span className={`badge ${car.availability}`}>{t(`car.${car.availability}`)}</span>
               </div>
               <div className="car-info">

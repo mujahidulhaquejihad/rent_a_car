@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
 import logoImg from '../Rent.png';
+import logoImgDark from '../rent2.png';
 import './Navbar.css';
 
 export default function Navbar() {
@@ -32,7 +33,7 @@ export default function Navbar() {
       <div className="navbar-accent" aria-hidden="true" />
       <div className="container navbar-inner">
         <Link to="/" className="logo" onClick={() => setMobileOpen(false)}>
-          <img src={logoImg} alt="Rent A Car" className="logo-img" />
+          <img src={dark ? logoImgDark : logoImg} alt="Rent A Car" className="logo-img" />
         </Link>
 
         <button

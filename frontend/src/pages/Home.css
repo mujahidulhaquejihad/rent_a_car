@@ -30,10 +30,23 @@
   animation: heroGradient 12s ease infinite;
 }
 
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url('/carpictures/pexels-mikebirdy-136872.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  mix-blend-mode: overlay;
+}
+
 .hero-bg::before {
   content: '';
   position: absolute;
   inset: 0;
+  z-index: 1;
   background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0V0zm40 40h40v40H40V40z' fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
@@ -293,6 +306,17 @@
   );
 }
 
+.home-showcase-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/carpictures/pexels-prime-cinematics-1005175-2036544.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+}
+
 .home-showcase-bg::after {
   content: '';
   position: absolute;
@@ -464,19 +488,25 @@
   flex-direction: column;
   border-radius: var(--radius-lg);
   overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.2s ease;
 }
 
 .home-car-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg), 0 12px 28px rgba(99, 102, 241, 0.15);
+  border-color: var(--primaryLight);
   text-decoration: none;
   color: inherit;
 }
 
 .home-car-image {
   position: relative;
-  height: 180px;
-  background: linear-gradient(145deg, #e2e8f0 0%, #cbd5e1 100%);
+  aspect-ratio: 4 / 3;
+  min-height: 200px;
+  background: linear-gradient(145deg, var(--border) 0%, #cbd5e1 100%);
   overflow: hidden;
 }
 
@@ -484,7 +514,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  object-position: center;
+  transition: transform 0.45s ease;
 }
 
 .home-car-card:hover .home-car-image img {
@@ -575,7 +606,7 @@
 
 @media (max-width: 640px) {
   .home-car-image {
-    height: 160px;
+    min-height: 160px;
   }
   .home-car-info {
     padding: 0.9rem;

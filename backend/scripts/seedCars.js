@@ -9,28 +9,21 @@ const Car = require('../models/Car');
 
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/rent_a_car';
 
-// Unsplash car images (free to use) - varied cars/sedans/SUVs
+// Local car pictures (frontend public/carpictures) – served at /carpictures/xxx
 const CAR_IMAGES = [
-  'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1494976380902-2fdc818f4c8?w=600&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1502877338533-6bb6ca1e68?w=600&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1544636331-f26539776a?w=600&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1551524555-8a29c2e2ca?w=600&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1563720225-e9bfe4a58d?w=600&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1609521263047-d0c2d0e307?w=600&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1619767886550-ef664c1a318?w=600&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=600&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1541899481282-d53bfe3c35fd?w=600&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=600&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=600&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=600&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?w=600&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?w=600&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=600&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1619767886550-ef664c1a318?w=600&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=600&h=400&fit=crop',
+  '/carpictures/pexels-mikebirdy-136872.jpg',
+  '/carpictures/pexels-bertellifotografia-3007436.jpg',
+  '/carpictures/pexels-christian-9-454702-1164778.jpg',
+  '/carpictures/pexels-svjae-3764984.jpg',
+  '/carpictures/pexels-mikebirdy-170811.jpg',
+  '/carpictures/pexels-mikebirdy-112460.jpg',
+  '/carpictures/pexels-pixabay-163213.jpg',
+  '/carpictures/pexels-vladalex94-1402787.jpg',
+  '/carpictures/pexels-mikebirdy-120049.jpg',
+  '/carpictures/pexels-mikebirdy-116675.jpg',
+  '/carpictures/pexels-pixabay-210019.jpg',
+  '/carpictures/pexels-georgesultan-1410013.jpg',
+  '/carpictures/pexels-prime-cinematics-1005175-2036544.jpg',
 ];
 
 const BRANDS = ['Toyota', 'Honda', 'Nissan', 'BMW', 'Mercedes', 'Audi', 'Hyundai', 'Suzuki', 'Mitsubishi', 'Ford', 'Chevrolet', 'Volkswagen', 'Kia', 'Mazda', 'Lexus'];

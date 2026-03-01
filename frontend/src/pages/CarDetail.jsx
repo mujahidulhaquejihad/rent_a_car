@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../context/AuthContext';
 import api from '../services/api';
-import { getImageUrl, FALLBACK_IMAGE } from '../utils/imageUrl';
+import { getCarImageUrl, CAR_PICTURES } from '../utils/imageUrl';
 import './CarDetail.css';
 
 export default function CarDetail() {
@@ -23,7 +23,6 @@ export default function CarDetail() {
     }).catch(() => setReviews([]));
   }, [id]);
 
-  const imgUrl = (path) => getImageUrl(path);
 
   if (loading) return <div className="container"><p>{t('common.loading')}</p></div>;
   if (!car) return <div className="container"><p>{t('common.noData')}</p><Link to="/cars">← {t('car.availableCars')}</Link></div>;
@@ -32,18 +31,13 @@ export default function CarDetail() {
     <div className="container">
       <div className="car-detail card">
         <div className="car-detail-gallery">
-          {car.images?.length ? (
-            car.images.map((src, i) => (
-              <img
-                key={i}
-                src={imgUrl(src)}
-                alt={`${car.model} ${i + 1}`}
-                onError={(e) => { e.target.onerror = null; e.target.src = FALLBACK_IMAGE; }}
-              />
-            ))
-          ) : (
-            <div className="car-placeholder large">{car.brand?.[0]}</div>
-          )}
+          {CAR_PICTURES.slice(0, 6).map((src, i) => (
+            <img
+              key={i}
+              src={getCarImageUrl(car, i)}
+              alt={`${car.brand} ${car.model} ${i + 1}`}
+            />
+          ))}
         </div>
         <div className="car-detail-info">
           <h1>{car.brand} {car.model}</h1>

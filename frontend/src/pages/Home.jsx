@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import api from '../services/api';
-import { getImageUrl } from '../utils/imageUrl';
+import { getCarImageUrl } from '../utils/imageUrl';
 import './Home.css';
 
 const TYPES = [
@@ -27,7 +27,6 @@ export default function Home() {
     }).catch(() => setCars([])).finally(() => setLoading(false));
   }, []);
 
-  const imgUrl = (path) => getImageUrl(path);
 
   return (
     <div className="home-page">
@@ -110,15 +109,13 @@ export default function Home() {
               {cars.slice(0, showCount).map((car) => (
               <Link key={car._id} to={`/cars/${car._id}`} className="home-car-card card">
                 <div className="home-car-image">
-                  {car.images?.[0] && (
-                    <img
-                      src={imgUrl(car.images[0])}
-                      alt={`${car.brand} ${car.model}`}
-                      loading="lazy"
-                      onError={(e) => { e.target.onerror = null; e.target.style.display = 'none'; e.target.nextElementSibling?.classList.add('show'); }}
-                    />
-                  )}
-                  <div className={`home-car-placeholder ${!car.images?.[0] ? 'show' : ''}`}>{car.brand?.[0]}</div>
+                  <img
+                    src={getCarImageUrl(car)}
+                    alt={`${car.brand} ${car.model}`}
+                    loading="lazy"
+                    onError={(e) => { e.target.onerror = null; e.target.style.display = 'none'; e.target.nextElementSibling?.classList.add('show'); }}
+                  />
+                  <div className="home-car-placeholder" aria-hidden="true">{car.brand?.[0]}</div>
                   <span className={`home-car-badge ${car.availability}`}>
                     {car.availability === 'available' ? 'Available' : car.availability}
                   </span>
